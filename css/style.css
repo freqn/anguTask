@@ -1,8 +1,7 @@
 /**** ASSETS & DEFAULTS ****/
 
-	@import url();
-	@import url();
-	@font-face {font-family: fontname; src: url('');}
+	@import url(http://fonts.googleapis.com/css?family=UnifrakturCook:700);
+	@import url(http://fonts.googleapis.com/css?family=Muli);
 
 	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
@@ -13,11 +12,15 @@
 		background: #292929;
 		color: #ffdd00;
 		font-size: 1.5em;
+		font-family: 'Muli', sans-serif;
 	}
 
 
 /**** PAGE ****/
-	h2 {text-align: center;}
+	h2 {
+		text-align: center;
+		font-size: 50px;
+	}
 	.page-container {
 		margin: 0 auto;
 		width: 40%;
