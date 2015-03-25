@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+  <!--<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/modernizr.custom-2.8.3.min.js"></script>
+		<script src="js/respond.js"></script>
+	<![endif]-->
+</head>
+<body ng-app="Todo" class="ng-cloak">
+  <div class="page-container" ng-controller="TodoCtrl">
+    <h2>Task List</h2>
+    <ul class="add-todo">
+      <li>
+         <input type="text"
+                class="txt"
+                data-ng-model="newTodo"
+                placeholder="Type a new task &amp; hit Enter"
+                data-ng-keyup="add($event)"
+                autofocus />
+        </li>
+    </ul>
+    <ul class="todoList" ng-repeat="todo in todos track by $index">
+      <li>
+        <span>{{ todo }}</span>
+        <button class="bt bt-achieve" ng-click="done(todo)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
